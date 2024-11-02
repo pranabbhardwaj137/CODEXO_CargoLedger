@@ -1,0 +1,40 @@
+body {
+    font-family: 'Sans-serif', Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #1a202c, #2d3748);
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+button:hover {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.table-header {
+    background-color: #2d3748;
+    color: #a0aec0;
+}
+
+.table-cell {
+    padding: 1rem;
+    border: 1px solid #4a5568;
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+input, textarea {
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #63b3ed;
+}

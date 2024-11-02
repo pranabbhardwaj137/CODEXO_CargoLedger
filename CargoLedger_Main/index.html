@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEXO_CargoLedger</title>
+    <link rel="icon" href="Logos/codexo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-r from-gray-900 to-gray-700 text-white font-sans">
+
+<!-- Container -->
+<div class="flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-2xl w-full mx-auto p-8 bg-gray-800 rounded-lg shadow-lg">
+        <div class="flex items-center mb-8">
+            <img src="Logos/codexo.png" alt="Codexo Logo" class="w-12 h-12 mr-4">
+            <h1 class="text-3xl font-bold tracking-wider text-green-500">Blockchain Ledger for Transparent Logistics</h1>
+        </div>
+        <p class="text-gray-400 mb-6">Ensuring Visibility, Security, and Trust in Every Shipment.</p>
+
+        <!-- Store Text Form -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold text-green-400 mb-4">Store Text Data</h2>
+            <form id="storeTextForm" class="space-y-4">
+                <div>
+                    <label for="senderSecret" class="block text-sm font-medium text-gray-300">Sender Secret</label>
+                    <input type="text" id="senderSecret" class="mt-1 p-2 w-full border border-gray-600 rounded bg-gray-900 text-gray-300" required>
+                </div>
+                <div>
+                    <label for="senderPublic" class="block text-sm font-medium text-gray-300">Sender Public Key</label>
+                    <input type="text" id="senderPublic" class="mt-1 p-2 w-full border border-gray-600 rounded bg-gray-900 text-gray-300" required>
+                </div>
+                <div>
+                    <label for="key" class="block text-sm font-medium text-gray-300">Ledger ID</label>
+                    <input type="text" id="key" class="mt-1 p-2 w-full border border-gray-600 rounded bg-gray-900 text-gray-300" required>
+                </div>
+                <div>
+                    <label for="text" class="block text-sm font-medium text-gray-300">Status</label>
+                    <textarea id="text" class="mt-1 p-2 w-full border border-gray-600 rounded bg-gray-900 text-gray-300" required></textarea>
+                </div>
+                <button type="button" onclick="storeText()" class="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Store Text</button>
+                <p id="storeResult" class="mt-4 text-green-400 font-semibold"></p>
+            </form>
+        </div>
+
+        <!-- Ledger Display -->
+        <div>
+            <h2 class="text-xl font-semibold text-green-400 mb-4">View Ledger by ID</h2>
+            <div class="mb-4">
+                <label for="ledgerId" class="block text-sm font-medium text-gray-300">Enter Ledger ID</label>
+                <input type="text" id="ledgerId" class="mt-1 p-2 w-full border border-gray-600 rounded bg-gray-900 text-gray-300" required>
+                <button type="button" onclick="fetchLedgerById()" class="w-full mt-2 px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">Show Ledger</button>
+            </div>
+            <div id="ledgerDisplay" class="mt-4 border border-gray-600 rounded p-4 bg-gray-700 overflow-auto">
+                <table class="min-w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-800 text-gray-400">
+                            <th class="border p-2">Public Key</th>
+                            <th class="border p-2">Ledger ID</th>
+                            <th class="border p-2">Status</th>
+                            <th class="border p-2">Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ledgerTableBody">
+                        <!-- Entries will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
