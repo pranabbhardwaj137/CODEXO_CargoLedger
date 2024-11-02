@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamante Blockchain Text Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="bg-gray-50">
+
+<div class="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-6">Diamante Blockchain Text Storage</h1>
+    
+    <!-- Store Text Form -->
+    <div class="mb-6">
+        <h2 class="text-lg font-semibold">Store Text Data</h2>
+        <form id="storeTextForm" class="space-y-4">
+            <div>
+                <label for="senderSecret" class="block text-sm font-medium text-gray-700">Sender Secret</label>
+                <input type="text" id="senderSecret" class="mt-1 p-2 w-full border rounded" required>
+            </div>
+            <div>
+                <label for="key" class="block text-sm font-medium text-gray-700">Key</label>
+                <input type="text" id="key" class="mt-1 p-2 w-full border rounded" required>
+            </div>
+            <div>
+                <label for="text" class="block text-sm font-medium text-gray-700">Text</label>
+                <textarea id="text" class="mt-1 p-2 w-full border rounded" required></textarea>
+            </div>
+            <button id="storeTextButton" type="button" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Store Text</button>
+        </form>
+        <p id="storeResult" class="mt-4 text-green-500 font-semibold"></p>
+    </div>
+
+    <!-- Retrieve Text Form -->
+    <div class="mt-8">
+        <h2 class="text-lg font-semibold">Retrieve Stored Text Data</h2>
+        <form id="retrieveTextForm" class="space-y-4">
+            <div>
+                <label for="publicKey" class="block text-sm font-medium text-gray-700">Public Key</label>
+                <input type="text" id="publicKey" class="mt-1 p-2 w-full border rounded" required>
+            </div>
+            <div>
+                <label for="retrieveKey" class="block text-sm font-medium text-gray-700">Key</label>
+                <input type="text" id="retrieveKey" class="mt-1 p-2 w-full border rounded" required>
+            </div>
+            <button id="retrieveTextButton" type="button" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Retrieve Text</button>
+        </form>
+        <p id="retrieveResult" class="mt-4 text-blue-500 font-semibold"></p>
+    </div>
+</div>
+
+<script src="managedata.js"></script>
+</body>
+</html>
