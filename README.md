@@ -1,62 +1,49 @@
-# Cargo Verification on Diamante Blockchain by CODEXO
+# CargoLedger: Blockchain Ledger for Transparent Logistics
+The CODEXO CargoLedger project aims to build a cargo verification system that leverages the Diamante Ledger Network for secure data storage and retrieval. This repository includes two primary components: CargoLedger_Main and Text Fetcher with Ledger with Diamante. These components provide separate functionality for data storage, retrieval, and secure user login, with future plans for integration into a comprehensive system.
 
+## Repository Structure
+**CargoLedger_Main**
+This folder implements the use of the Diamante Ledger Network to store data, specifically the verification status of cargo, in text form. It serves as the primary storage solution for the cargo verification system, ensuring that verification statuses are securely saved on the blockchain for transparency and immutability.
 
-This project enables secure and immutable cargo verification using the Diamante blockchain. By utilizing a decentralized ledger, it ensures traceable, tamper-proof cargo records.
+**Text Fetcher with Ledger with Diamante**
+This folder focuses on a secure login system using Diamante-generated private and public keys. Users log in to the Cargo Verification system using their unique keys, ensuring only authorized access to verification data. This component also allows fetching of the stored data for verification purposes.
 
-### Project Overview
-Cargo Verification: A system that verifies and logs cargo details on Diamante's blockchain for enhanced transparency and security.
+**Integration Status**
+The integration of both CargoLedger_Main and Text Fetcher with Ledger with Diamante is currently in progress. Once complete, the system will enable seamless user authentication and verification data storage and retrieval through the Diamante Ledger Network. Additional time is required to finalize this integration for a fully cohesive solution.
 
-Security and Immutability: Data logged on the blockchain cannot be altered, ensuring data integrity.
-
-### Repository Structure
-
-index.js: Handles the main logic for interfacing with the Diamante blockchain.
-
-server.js: Sets up the backend server to serve the application and manage API routes.
-
-## Getting Started
+## Usage
 ### Prerequisites
+Node.js installed
 
-Node.js: Download Node.js and install it on your machine.
-Diamante Blockchain Access: You’ll need access to the Diamante blockchain and, if required, relevant API credentials.
-### Installation
-#### Clone the Repository:
+Diamante Ledger account and access to the Diamante SDK
 
-bash
-
-    git clone https://github.com/pranabbhardwaj137/CODEXO_blockchain.git
-
+### Setup
+#### Clone the repository:
 
 bash
 
-    cd CODEXO_blockchain
+    git clone https://github.com/pranabbhardwaj137/CODEXO_CargoLedger.git
+    cd CODEXO_CargoLedger
+    
+*Navigate to the desired folder (CargoLedger_Main or Text Fetcher with Ledger with Diamante) to set up each component independently.*
 
 
-### Install Dependencies:
+This component is designed to store cargo verification status on the Diamante Ledger.
 
-
-npm install
-
-
-### Running the Application
-#### Start the Application:
-
-Run index.js to initialize the blockchain logic:
-
+To start the server, run:
 bash
 
     node index.js
 
-Run server.js to start the backend server:
+**Text Fetcher with Ledger with Diamante**
 
+This component allows users to log in using Diamante keys and retrieve verification status.
+To start the server, run:
 bash
 
     node server.js
 
-#### Access the Application:
-
-Open your browser and navigate to http://localhost:3000 to view the cargo verification dashboard.
-
+Note: Both components currently work independently. Complete system functionality will be achieved upon integration.
 
 ### Using the Portal
 
@@ -74,9 +61,17 @@ Verification Status: Enter the cargo verification status to be displayed on the 
 
 Submit and Verify: Once all details are entered, submit the form. The system will record the verification status on the Diamante blockchain, ensuring data integrity and transparency.
 
+
 ## Use case
 Logistics Company: The primary user who logs cargo data into the blockchain for verification.
 
 Regulatory Authorities: May view cargo status to verify compliance with shipping regulations.
 
 Clients/Partners: Can access cargo records to confirm that the cargo has been verified and approved.
+
+
+## Future Development
+With further development, the integration of these two components will offer a complete Cargo Verification system, combining secure login and data storage functionalities under one unified interface.
+
+## Contributing
+Contributions to this project are welcome. Feel free to fork the repository and submit pull requests with improvements or features.
