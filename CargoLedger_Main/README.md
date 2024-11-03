@@ -4,7 +4,7 @@
 CargoLedger leverages blockchain technology to authenticate and monitor cargo throughout its journey. By storing cargo details on the Diamante blockchain, it ensures data integrity, accessibility, and immutability, which are essential for reliable cargo verification.
 
 ## Site Page
-![Site_Demo](CargoLedger_Main/img/image.png)
+![Site_Demo](/img/image.png)
 
 ## Features
 **Decentralized Ledger**: Ensures secure and immutable record-keeping.
