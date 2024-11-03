@@ -7,11 +7,14 @@ The Text Fetcher with Ledger project leverages the Diamante blockchain to secure
 
 ## Prerequisites
 Node.js (v14 or higher recommended)
+
 Diamante Blockchain testnet account with a valid secret key
+
 Dependencies (installed through npm)
 
 ## Features
 Decentralized Storage: Ensures secure and immutable text storage.
+
 Error Handling: Comprehensive error-handling mechanisms to improve stability.
 
 ## Prerequisites
