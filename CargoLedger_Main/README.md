@@ -25,7 +25,7 @@ Dependencies (managed through npm)
 bash
 
     git clone https://github.com/pranabbhardwaj137/CODEXO_CargoLedger.git
-    cd CargoLedger_Main
+    cd CODEXO_CargoLedger
 ### Install Dependencies:
 
 bash
