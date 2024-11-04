@@ -58,7 +58,7 @@ Used to record cargo information on the Diamante blockchain. This ensures that c
 ### Retrieving a Cargo Record
 Allows users to fetch cargo details based on a public key and cargo ID. This is useful for validating the cargo's origin and ensuring it has not been tampered with.
 
-### Contributing
+## Contributing
 Feel free to open issues or submit pull requests. We welcome contributions that improve the security, functionality, or efficiency of the CargoLedger.
 
 
